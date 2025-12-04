@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light ">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">Sistema de Notas de Estudiantes</h2>
+
+        <div class="row" id="estudiantes-container">
+        <!-- columna 1 -->
+        <div class="col-md-6">
+
+        <!-- estudiante 1 -->
+          <div class="card-estudiante mb-3 p-3">
+            <h5>Estudiante 1</h5>    
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/uno.jpg" class="img-fluid mb-2 estudiante-img" alt="estudiante">
+              </div>
+              <div class="col-md-6">
+                <p>Nota 1 (30%):</p>
+                <input type="number" id="nota1-est1" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 2 (30%):</p>
+                <input type="number" id="nota2-est1" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 3 (40%):</p>
+                <input type="number" id="nota3-est1" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+              </div>
+            </div>
+            <p class="text-center">Nota Definitiva: <span id="def-est1">0</span></p>
+          </div>  
+
+        <!-- estudiante 2 -->
+          <div class="card-estudiante mb-3 p-3">
+            <h5>Estudiante 2</h5>    
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/dos.jpg" class="img-fluid mb-2 estudiante-img" alt="estudiante">
+              </div>
+              <div class="col-md-6">
+                <p>Nota 1 (30%):</p>
+                <input type="number" id="nota1-est2" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 2 (30%):</p>
+                <input type="number" id="nota2-est2" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 3 (40%):</p>
+                <input type="number" id="nota3-est2" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+              </div>
+            </div>
+            <p class="text-center">Nota Definitiva: <span id="def-est2">0</span></p>
+          </div>  
+    
+
+          </div>
+
+        <!-- columna 2 -->
+          
+        <div class="col-md-6">
+
+        <!-- estudiante 3 -->
+          <div class="card-estudiante mb-3 p-3">
+            <h5>Estudiante 3</h5>    
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/tres.jpg" class="img-fluid mb-2 estudiante-img" alt="estudiante">
+              </div>
+              <div class="col-md-6">
+                <p>Nota 1 (30%):</p>
+                <input type="number" id="nota1-est3" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 2 (30%):</p>
+                <input type="number" id="nota2-est3" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 3 (40%):</p>
+                <input type="number" id="nota3-est3" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+              </div>
+            </div>
+            <p class="text-center">Nota Definitiva: <span id="def-est3">0</span></p>
+          </div>  
+          
+
+        <!-- estudiante 4 -->
+          <div class="card-estudiante mb-3 p-3">
+            <h5>Estudiante 4</h5>    
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/cuatro.jpg" class="img-fluid mb-2 estudiante-img" alt="estudiante">
+              </div>
+              <div class="col-md-6">
+                <p>Nota 1 (30%):</p>
+                <input type="number" id="nota1-est4" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 2 (30%):</p>
+                <input type="number" id="nota2-est4" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+                <p>Nota 3 (40%):</p>
+                <input type="number" id="nota3-est4" class="form-control mb-2" min="0" value="0" onchange="calcular()">
+              </div>
+            </div>
+            <p class="text-center">Nota Definitiva: <span id="def-est4">0</span></p>
+          </div>  
+          
+
+          </div>
+
+        </div>
+    
+
+    <!-- Resumen -->
+    <div class="card-resumen">
+    <div class="row mt-4">
+      <div class="col-md">
+        <div class="card-definitiva p-3">
+          <p>Definitiva estudiante 1: <span id="defi-est1">0</span></p>
+          <p>Definitiva estudiante 2: <span id="defi-est2">0</span></p>
+          <p>Definitiva estudiante 3: <span id="defi-est3">0</span></p>
+          <p>Definitva estudiante 4: <span id="defi-est4">0</span></p>
+          <p>Promedio de definitivas: <span id="definitiva">0</span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+    <script src="js/notas.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
