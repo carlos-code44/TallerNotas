@@ -21,15 +21,30 @@ function calcular(){
     ];
 
     let definitivas = [];
-    for(let i = 0; i<4; i++){
-        definitivas[i]= nota1[i]*0.3 + nota2[i]*0.3 + nota3[i]*0.4;
-        document.getElementById("def-est" + (i+1)).innerText=definitivas[i].toFixed(2);
-        document.getElementById("defi-est" + (i+1)).innerText=definitivas[i].toFixed(2);
+    let aprobados = 0;
+    let noAprobados = 0;
+
+    for(let i = 0; i < 4; i++){
+        definitivas[i] = nota1[i]*0.3 + nota2[i]*0.3 + nota3[i]*0.4;
+
+        document.getElementById("def-est" + (i+1)).innerText = definitivas[i].toFixed(2);
+        document.getElementById("defi-est" + (i+1)).innerText = definitivas[i].toFixed(2);
+
+        if(definitivas[i] >= 70){
+            document.getElementById("estado-est" + (i+1)).innerText = "Aprobó";
+            aprobados++;
+        } else {
+            document.getElementById("estado-est" + (i+1)).innerText = "No aprobó";
+            noAprobados++;
+        }
     }
 
+    // promedio general
     let suma = definitivas.reduce((a,b) => a + b, 0);
     let definitiva = suma / 4;
-
     document.getElementById("definitiva").innerText = definitiva.toFixed(2);
 
+    // actualizar resumen
+    document.getElementById("aprobados").innerText = aprobados;
+    document.getElementById("noaprobados").innerText = noAprobados;
 }

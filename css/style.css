@@ -14,6 +14,7 @@ img {
 .card-estudiante {
     background-color: rgb(160, 153, 153);
     border-radius: 15px;
+    box-shadow: 0 3px 10px #000;
 }
 
 .card-definitiva {
